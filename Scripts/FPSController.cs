@@ -18,7 +18,7 @@ public class FPSController : MonoBehaviour
 
     private Vector2 m_LookInput;
     [SerializeField] private FPSMouseLook m_MouseLook = null;
-    private Camera m_Camera;
+    [SerializeField] private Camera m_Camera;
 
 
     private Vector2 m_MoveInput;
@@ -41,7 +41,6 @@ public class FPSController : MonoBehaviour
     void Start()
     {
         m_CharacterController = GetComponent<CharacterController>();
-        m_Camera = Camera.main;
         m_StepCycle = 0f;
         m_NextStep = m_StepCycle / 2f;
         m_Jumping = false;
